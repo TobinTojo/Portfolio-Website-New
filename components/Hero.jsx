@@ -18,6 +18,22 @@ export default function Hero() {
                     </div>
                 </h1>
             </div>
+             <div className="social-media-icons">
+                <a href="https://github.com/TobinTojo" target="_blank">
+                    <img src="./images/Github_white.png" className="icon" id="github-icon"></img>
+                </a>
+                <a href="https://www.linkedin.com/in/tobintojo/" target="_blank">
+                    <img src="./images/LinkedIN_white.png" className="icon"  id="linkedin-icon"></img>
+                </a>
+                <a href="https://tobintojo.itch.io/" target="_blank">
+                        <img src="./images/itch-io-icon-white.png" className="icon" id="itch-icon" alt="Itch">
+                        </img>
+                </a>       
+                <a href="https://www.youtube.com/" target="_blank">
+                        <img src="./images/Youtube_white.png" className="icon" id="youtube-icon" alt="YouTube">
+                        </img>
+                </a>            
+            </div>
         </section>
     )
 }
