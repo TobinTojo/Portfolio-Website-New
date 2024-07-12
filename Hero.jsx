@@ -8,7 +8,10 @@ export default function Hero() {
             <div id="personal-info">
              <img src="./images/Tobin-Tojo-Headshot.jfif" alt="Tobin Tojo Headshot" id="profile-image"></img>
                 <h1 id="title-1"  className="red-text">Hi I'm</h1>
-                <h2 id="title-2" className="blue-text">Tobin Tojo</h2>
+                <div id= "wave-section">
+                    <h2 id="title-2" className="blue-text">Tobin Tojo!</h2>
+                    <img src="./images/brown-hand.png" className="wave"/>
+                </div>
                 <h1 id="who-am-i">
                     <span>I am a</span>
                     <div className="message">

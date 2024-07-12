@@ -43,7 +43,7 @@ export default function Projects() {
                 <h1 id="about-title">Projects.</h1>
                 <p className="about-text">These projects demonstrate my expertise with practical examples of some of my work, including brief descriptions and links to code repositories and live demos. They showcase my ability to tackle intricate challenges, adapt to various technologies, and efficiently oversee projects. 
                  </p>
-                <div id="professions">
+                <div className="list-projects">
                      <div className ="project-div">
                         <img className="project-img" src={`./images/${project_title[0].thumbnail}`}></img>
                         <p className = "project-label">{project_title[0].label}</p>
@@ -81,7 +81,7 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
-                <div id="professions">
+                <div className="list-projects">
                      <div className ="project-div">
                         <img className="project-img" src={`./images/${project_title[2].thumbnail}`}></img>
                         <p className = "project-label">{project_title[2].label}</p>

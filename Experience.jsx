@@ -8,7 +8,7 @@ export default function Experience() {
              <div id="work-experience">
                  <h3 id="about-header">WHAT I'VE DONE SO FAR</h3>
                  <h1 id="about-title">Work Experience.</h1>
-                 <div id="push-down"></div>
+                 <div className="push-down"></div>
                  <div className="timeline">
                 <div className="container left">
                     <div className="content">
