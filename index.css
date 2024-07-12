@@ -1,10 +1,20 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #27292c;
     color: white;
 }
-#personal-info {
-  
+
+.border-text {
+    color:rgb(147 197 253); 
+    background:#27292c; 
+    padding:1.5px;
+    border: 1px solid navy;
+    border-radius: 5px;    
 }
 
 #profile-image {
@@ -18,6 +28,7 @@ body {
 #title-1 {
       margin-top: 200px;
     display: flex;
+    margin-bottom: 0;
      flex-direction: column;
     align-items: flex-start; /* Align title to the left */
     margin-left: 20px; /* Adjust left margin as needed */
@@ -25,7 +36,9 @@ body {
 }
 
 #title-2 {
-    display: flex;
+    display: inline-block;
+    margin-right: 20px;
+    
      flex-direction: column;
     align-items: flex-start; /* Align title to the left */
     margin-left: 20px; /* Adjust left margin as needed */
@@ -42,6 +55,71 @@ body {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.nav-text {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    margin: 0 5px;
+    border: none;
+    background: none;
+    position: relative; /* Add position relative for the pseudo-element */
+    overflow: hidden; /* Hide overflow for the pseudo-element */
+    z-index: 1; /* Set z-index to appear above the pseudo-element */
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.nav-text:hover {
+    color: #27292c;
+}
+
+.nav-text:before {
+    content: "";
+    position: absolute;
+    background: #f77062;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top 0.09s ease-in;
+}
+
+.nav-text:hover:before {
+    top: 0;
+}
+
+
+#logo-img {
+    width:200px;
+    padding: 10px;
 }
 
 .blue-text {
@@ -63,7 +141,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    width: 1050px;
+    width: 100%;
     margin-bottom: 80px;
 }
 
@@ -86,6 +164,15 @@ body {
     animation: openclose 10s ease-in-out infinite;
 }
 
+#footer-text {
+    padding-top: 10px;
+     padding-bottom: 10px;
+      font-size: 14px;
+     padding-left: 30px;
+     font-weight: normal;
+     text-align: center;
+    color: #aaaaaa;
+}
 
 @keyframes openclose {
     0% {
@@ -228,7 +315,7 @@ body {
 }
 
 #work-experience {
-    height: 2000px;
+    height: 2200px;
 }
 
 #projects-section {
@@ -307,11 +394,12 @@ body {
 
 .project-div {
     height: 35rem;
-    position: absolute;
+    display: inline-block;
+    margin-top: 50px;
     width: 30rem;
     background-color: rgb(30, 41, 59);
     border-radius: 20px;
-    margin-right: 20px;
+    margin-right: 100px;
     transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
@@ -325,6 +413,36 @@ body {
     margin-left: 60px;
     padding-top: 60px;
     padding-bottom: 600px;
+}
+#wave-section {
+    display: inline-block;
+}
+.wave {
+    display: inline-block;
+    animation-name: wave-animation;  
+    height: 60px;
+    width: 60px;
+    animation-duration: 2.5s;        
+    animation-iteration-count: infinite;    
+  }
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  
+  100% { transform: rotate( 0.0deg) }
+}
+  
+.list-projects {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-bottom: 10px;
 }
 .software-img {
   height: 100px;
@@ -598,4 +716,92 @@ body {
   margin-left: 225px;
   align-items: center;
   justify-content: flex-start; /* Aligns content to the left */
+}
+
+/* Common button styles */
+.button-email, .phone-email {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between text and image */
+  margin: 0 auto;
+  width: 270px;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: .8em 1.4em;
+  border: none;
+  color: #fff; /* White text */
+  transition: .2s;
+}
+
+/* Email button styles */
+.button-email {
+  background: linear-gradient(to right, #f77062 0%, #f77062 70%, #CB5E52 70%, #CB5E52 100%);
+}
+
+.button-email:hover {
+  background: linear-gradient(to right, #FF4848 0%, #FF4848 70%, #CB3928 70%, #CB3928 100%);
+}
+
+/* Phone button styles */
+.phone-email {
+  background: linear-gradient(to right, #22C1E6 0%, #22C1E6 70%, #18A8C8 70%, #18A8C8 100%);
+}
+
+.phone-email:hover {
+  background: linear-gradient(to right, #2287E6 0%, #2287E6 70%, #1858A6 70%, #1858A6 100%);
+}
+
+.phone-email:hover img {
+  animation: wiggle .1s alternate ease infinite;
+}
+
+.buttin-email img {
+    transition: transform 0.5s ease;
+}
+
+.button-email:hover img {
+    transform: skew(-20deg);
+
+}
+
+/* Image styles */
+.contact-img {
+  display: flex;
+  flex-direction: flex-end;
+  height: 40px;
+}
+
+@keyframes wiggle {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(30deg); }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+  .list-projects {
+      display: flex;
+      justify-content: center;
+      margin-left: 80px;
+      margin-right: auto;
+      margin-bottom: 10px;
+  }
+
+  .project-img {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 10px auto;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .skills-img {
+    height: 80px;
+    margin-right: 30px;
+    padding-bottom: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 }
